@@ -1,20 +1,17 @@
 #!/bin/bash
 
+git pull
 
-msg="update shell tools"
+gitmsg="update_shell_tools"
 
 if [ "$#" != 0 ]
 then
-	msg=$1
-	echo 'fuck'
+	gitmsg=$1
 fi
-
-
-git pull
 
 git add ./
 
-git commit -m $msg
+git commit -m ${gitmsg}
 
 git push
 
