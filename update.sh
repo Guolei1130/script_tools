@@ -1,15 +1,20 @@
-COMMENT_MSG="update shell tools"
+#!/bin/bash
 
-if [ "#$" != 1 ]
+
+msg="update shell tools"
+
+if [ "$#" != 0 ]
 then
-	COMMENT_MSG=$1
+	msg=$1
+	echo 'fuck'
 fi
+
 
 git pull
 
 git add ./
 
-git commit -m $COMMENT_MSG
+git commit -m $msg
 
 git push
 
